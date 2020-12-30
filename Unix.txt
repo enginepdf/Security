@@ -1,0 +1,50 @@
+// reference : https://m.blog.naver.com/PostView.nhn?blogId=kdi0373&logNo=220378248710&proxyReferer=https:%2F%2Fwww.google.com%2F#
+
+서버(UNIX) 점검항목
+ 1) 계정 및 비밀번호 관리
+   - 로그인 설정
+   - root 이외의 UID가 0인 계정 존재여부
+   - 불필요 계정 존재 여부(Default 계정)
+   - Shell 제한
+   - passwd 파일 권한 설정
+   - group 파일 권한 설정
+   - shadow 파일 권한 설정
+   - 비밀번호의 최소 길이 제한 설정
+   - 비밀번호의 최대 사용 기간 설정
+   - 취약한 비밀번호 존재여부
+
+ 
+
+ 2) 접근 제어
+   - 일반 사용자의 su 명령 제한
+   - root 계정 Telnet 제한
+   - root 계정 ftp 접속 제한
+   - 익명 FTP(Anonymous FTP)를 제한
+   - 세션 타임아웃을 설정
+   - r-commands 제한
+   - NFS 공유관련 취약점을 제거 여부
+
+ 
+
+ 3) 시스템 보안
+   - Crontab 관련 파일에 대한 접근 제한
+   - PATH 환경 변수 설정
+   - UMASK 설정
+   - hosts 파일의 권한 설정
+   - inetd.conf 파일의 권한 설정
+   - hosts.equiv 파일의 권한 설정
+
+ 
+
+ 4) 서비스 보안
+   - 서비스 파일권한 설정
+   - 기타 서비스 설정
+   - 서비스 Banner 관리
+   - SNMP 서비스 설정(Community String)
+
+ 
+
+ 5) 로그관리 및 보안패치
+   - Syslog 기록 설정
+   - su 로그를 기록 설정
+   - 보안 패치

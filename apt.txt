@@ -1,0 +1,135 @@
+// reference : https://m.blog.naver.com/PostView.nhn?blogId=kdi0373&logNo=220378248710&proxyReferer=https:%2F%2Fwww.google.com%2F
+
+Targeting 공격 절차 (APT)
+
+   1) Initial Compromise : 내가 목표로하는 타겟 조직에 침투와 절차
+
+      - 계정도용
+
+      - 악성코드 감염
+
+      - 악성코드 감염 경로 : Email(악성파일 및 악성 URL 첨부) -> 소프트 익스플로잇(사회공학 용어 : 스피어피싱)
+
+                                   : 웹사이트
+
+                                   : 로컬 네트워크 통한 전의 (랜섬웨어 워나크라이 / 최조는 이메일로 시작해서 로컬에서 웜방식으로 공격)
+
+                                   : USB Thumb
+
+
+
+   2) Establish Foothold : 추가 공격 도구를 다운로드 한다. (활동하기 좋은 저장소에 가져다 놓는다.)
+
+
+
+   3) Privilege Escalation : Exploite (권한상승 취약점)
+
+       - Windows UAC
+
+
+
+   4) Internal Reconnaissance : 내부 정찰
+
+        -  Scanning -> Live host (ARP를 조금씩 체크를 한다.)
+
+        -  port scan
+
+        -  참고 : NMAP같은 패킷을 많이 남기는 도구는 탐지(Detection) 당하기 쉽다.
+
+        -  참고 : ICMP는 윈도우에 기본적으로 닫혀 있다.
+
+                                   
+
+   5) Lateral Movement : 제어 권한을 회득한 시스템과 주변의 로컬 시스템들을 제어권한 회득
+
+        - 패킷릴레이, 패킷스니핑, Credential 수집
+
+        - 참고(tool) : mimikatz ( 사용자의 메모리를 가지고 온다.)
+
+        - cifs, netbios를 이용한 파일업로드 및 실행
+
+
+
+   6) Maintain Presence : 제어 권한 유지
+
+                                  : 레지스트리 조작
+
+                                  : Task Schedule
+
+                                  : WMI Rrepository
+
+
+
+   7) Complete Mission : 정보 수집
+
+
+
+
+
+ 2. APT 분석을 위한 알아야할 기술 및 지식
+
+   1) 디스크의 파티션(볼륨) 구조와 손상된 VBR 복원 방법
+
+   2) 윈도우 레지스트리의 구조와 관련 파일 추출, 분석 방법
+
+   3) 브라우저별 사용자 방문기록 관련 파일 분석 방법
+
+   4) 윈도우의 Prefetch/Superfetch 분석 방법
+
+   5) 악성코드 분석 (동적분석, 정적분석) 방법
+
+   6)  winhex, forecoyp_handy, The Sleuth kit, NTFS Log Tracker, reg ripper, REGA, WinPregetchVie, IDA, Sysinternals Suites 
+
+
+
+ 3. 기타
+
+   1) Defense-In depth : 보안방어는 한가지만 하면 안되고 계속적으로 견고한 마지 노선을 만들어 놓아야 한다.
+
+   2) UAC : 윈도우 비스트 부터 적용됨
+
+   3) Tool : REMNUX (우분트 기반의 포렌식 도구를 모아놓은 이미지)
+
+   4) exploit
+
+          - 소프트웨어의 잠재되어있는 취약점을 유발(trigging) 시키는 코드, 데이터의 집합을 말한다.
+    - 주입지점(인젝션벡터)
+    - 쉘코드를 실행 시키기 위해서 사전 작업을 하는 것이 익스플로잇 이다.
+    - buffer overflow, use after free, format string, null pointer reference ... (취약점을 유발시키는 것이 익스플로잇 이다.)
+
+   5) shellcode
+    - 소프트웨어에 의해서 임의로 실행되는 기계어코드 혹은 시스템 명령어 집합
+    - 악성코드를 다운받는 역할은 쉘코드가 하는 것이다.
+    - reverse remote shell, bind remote shell, download & ececute , remote vnc, meterpreter (reverse)
+
+   6) Tool : Wollf (악성코드 생성기)
+
+   7) 기술 문서  : Cyber Kill-Chain , Rasheed Martin (록히트마틴 발간)
+
+   8) hammertess : APT28 해킹 그룹이 상요하는 보고서
+
+   9) Inject vector : 공격을 시도할수 있는 지점
+
+   10) user agent string
+
+   11) Packet Relay
+
+   12) Artifact(아티팩트) : 운영제제나 소프트웨어가 동작하면서 생성되는 디지털 데이터들.
+                      : 윈도우 이벤트로그, 레지스트리, Prefetch/Superfetch, 파일시스템 메타정보, 물리메모리, 네트워크 연결정보 ...
+                      : IR Script (Incident Response Script) -> 호스트에 존재하는 아티팩트를 한꺼번에 수집할 수 있는 자동화 도구
+                      : BAT, SH, PS, PY 등의 다양한 포맷 
+
+   13) Tool : SQLMAP (sql injection tool)
+
+   14) Tool : FTK_imager
+
+   15) Tool : X-ways_winhex
+   16) GPT, MBR, Partition Table, NTFS, FAT32, Slack space, VBR
+
+   17) Tool : forecoy
+
+   18) Tool : REGA
+
+   19) Tool : regripper
+
+   20) Tool : sysinternalssuite

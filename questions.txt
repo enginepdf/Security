@@ -55,3 +55,125 @@
 28. APT 공격
 
 29. 사물인터넷(IoT)
+
+30. 가상 메모리(Thrashing에 대해 설명)
+
+31. 리눅스 명령어 find 명령어
+
+32. 리버싱
+
+33. Traceroute 분석
+
+34. Firewaling의 원리
+
+35. Scanning ( Active Host Scanning , Port Scanning , Vulnerability Scanning)
+
+36. Active Host Scanning의 종류?
+
+- ICMP Echo Scanning
+
+- TCP Ping Scanning
+
+- UDP Ping Scanning
+
+- ARP Scanning
+
+37. Port Scanning의 종류?
+
+1) UDP Port Scanning
+
+2) TCP Port Scanning
+
+- CONNECT Scanning
+
+- SYN Scanning
+
+- FIN / NULL / X-MAS Scanning
+
+- FTP Bounce Scanning
+
+- Idle Scanning
+
+38. 취약점 스캐닝 Tool의 종류?
+
+1) 네트워크 / 시스템 취약점 스캐너
+
+- OpenVAS
+
+- Nmap
+
+- Zenmap
+
+- Nessus
+
+- Sscan
+
+- SARA
+
+- Retina
+
+- Nikto
+
+2) 웹 취약점 스캐너
+
+- Netsparker
+
+- Acunetix
+
+- AppScan
+
+- Burp Suit
+
+- Webinspect
+
+- N-Stalker
+
+39. War Dialing
+
+40. Proxy Server
+
+41. TOR Proxy
+
+42. NetBIOS
+
+43. Brute Forcing , Dictionary Attack , Hybrid Attack
+
+44. SFX (self-extracting file)
+
+45. RAT (Remote Administration Tool)
+
+46. MS08-014 Exploit?
+
+47. SSH Tunneling?
+
+48. HTTP Tunneling?
+
+49. Covering Track
+
+1) Hstory 및 로그조작
+
+2) 데이트 은닉(Data Hiding)
+
+
+50. 
+
+ 멀웨어 (윔 vs 바이러스 vs 트로이목마)
+ 랜섬웨어
+ Dos/DDos
+ 애드웨어
+ 스파이웨어
+
+
+51.
+
+데이터 영역
+
+ - 전역변수(static 변수)
+
+힙 영역 (런타임 크기 결정)
+
+ - 동적 할당
+
+스택 영역 (컴파일 타임에 크기 결정)
+
+ - 지역변수, 함수

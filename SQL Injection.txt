@@ -1,0 +1,29 @@
+// reference : https://m.blog.naver.com/PostView.nhn?blogId=kdi0373&logNo=220378248710&proxyReferer=https:%2F%2Fwww.google.com%2F#
+
+SQL Injection 점검 항목
+
+   1) SQL Injection
+
+     - Error-Based : SQL 오류를 유발하는 공격 기법
+
+     - Union-Based : Union을 이용하여 Query를 추가하여 공격하는 기법
+
+ 
+
+   2) Blind SQL Injection
+
+     - Content-Based : 참/거짓의 입력에 대하여 응답에 대하여 정보를 추즉하는 공격기법
+
+     - Time-Based : 참/거짓의 경우에 처리되는 시간차를 이용하여 정보를 추죽하는 공격 기법
+
+ 
+
+   3) 관련 기술들
+
+     - Stored Procedure : 저장 프로시저(xp_cmdshell 등)를 이용한 우회하는 기법
+
+     - Cookie-Based : cookie 값에 코드를 삽입하여 공격하는 기법
+
+     - Hex-Based : hex 값을 이용하여 특수기호 필터링을 우회하는 기법
+
+     - Stacked Query : 하나의 트랙잰셕에 많은 쿼리를 사용하는 공격하는 기법
